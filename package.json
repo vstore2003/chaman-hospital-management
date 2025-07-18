@@ -10,7 +10,9 @@
     "db:seed": "tsx scripts/seed.ts",
     "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "postinstall": "prisma generate",
+    "vercel-build": "npm install --legacy-peer-deps && prisma generate && next build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
